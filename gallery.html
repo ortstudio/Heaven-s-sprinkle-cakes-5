@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Heaven's Sprinkle Cakes</title>
+<meta name="description" content="Browse the full gallery of custom cakes, cupcakes, and cookies by occasion — birthdays, engagements, baby showers, graduations, and more.">
+<meta property="og:title" content="Gallery — Heaven's Sprinkle Cakes">
+<meta property="og:description" content="Browse the full gallery of custom cakes, cupcakes, and cookies by occasion — birthdays, engagements, baby showers, graduations, and more.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="cake-birthday-manu.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gallery — Heaven's Sprinkle Cakes">
+<meta name="twitter:description" content="Browse the full gallery of custom cakes, cupcakes, and cookies by occasion — birthdays, engagements, baby showers, graduations, and more.">
+<meta name="twitter:image" content="cake-birthday-manu.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FFFFFF; --cream-soft: #FDEEF3; --pink-pale: #FBDCE6;
+    --cocoa: #2B1F26; --cocoa-soft: #8A7480;
+    --raspberry: #E8527D; --raspberry-deep: #C93866;
+    --line: rgba(43, 31, 38, 0.12); --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--cream); color: var(--cocoa); font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line-height: 1.1; margin: 0; letter-spacing: -0.01em; }
+  a { color: inherit; }
+  img { max-width: 100%; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+
+  header { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 50; background: #FEFBFC;
+    background: color-mix(in srgb, var(--cream) 94%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); box-shadow: 0 2px 12px rgba(43,31,38,0.05); }
+  .header-spacer { height: 76px; }
+  nav.wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 12px; }
+  .logo { display: flex; align-items: center; gap: 12px; font-family: "Fraunces", serif; font-weight: 700; font-size: 1.28rem; white-space: nowrap; text-decoration: none; color: var(--cocoa); min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .logo span.brand-text { overflow: hidden; text-overflow: ellipsis; }
+  .logo-placeholder { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 10px; border: 1.5px dashed var(--cocoa-soft); background: color-mix(in srgb, var(--pink-pale) 40%, transparent); color: var(--cocoa-soft); font-weight: 800; font-size: 0.6rem; letter-spacing: 0.03em; flex: none; }
+  .back-link { font-weight: 800; font-size: 0.94rem; text-decoration: none; color: var(--cocoa-soft); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+  .back-link:hover { color: var(--raspberry); }
+  .nav-cta { background: var(--raspberry); color: #fff; font-weight: 800; font-size: 0.92rem; padding: 11px 20px; border-radius: 999px; text-decoration: none; white-space: nowrap; }
+
+  .page-head { padding: 60px 0 46px; text-align: center; }
+  .page-head span.kicker { font-weight: 800; color: var(--raspberry-deep); font-size: 0.98rem; display: block; margin-bottom: 10px; }
+  .page-head h1 { font-size: clamp(2.1rem, 4vw, 3rem); margin-bottom: 14px; }
+  .page-head p { color: var(--cocoa-soft); font-size: 1.06rem; max-width: 56ch; margin: 0 auto; }
+
+  .hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-bottom: 70px; }
+  .hub-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: var(--cocoa);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 26px -14px rgba(43,31,38,0.35);
+    transition: transform .22s ease, box-shadow .22s ease;
+  }
+  .hub-card:hover { transform: translateY(-5px); box-shadow: 0 18px 36px -14px rgba(43,31,38,0.45); }
+  .hub-card .thumb { aspect-ratio: 4/3; overflow: hidden; }
+  .hub-card .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+  .hub-card:hover .thumb img { transform: scale(1.07); }
+  .hub-card .body { padding: 18px 20px 22px; border: 1px solid var(--line); border-top: none; border-radius: 0 0 18px 18px; }
+  .hub-card h2 { font-size: 1.18rem; margin-bottom: 6px; }
+  .hub-card p { margin: 0 0 12px; color: var(--cocoa-soft); font-size: 0.92rem; }
+  .hub-card .view { font-weight: 800; font-size: 0.86rem; color: var(--raspberry-deep); }
+
+  .cta-strip { text-align: center; padding: 20px 0 70px; }
+  .cta-strip h2 { font-size: clamp(1.7rem, 3vw, 2.2rem); margin-bottom: 14px; }
+  .cta-strip p { color: var(--cocoa-soft); margin-bottom: 26px; }
+  .btn-primary { display: inline-block; background: var(--raspberry); color: #fff; font-weight: 800; padding: 15px 28px; border-radius: 999px; text-decoration: none; box-shadow: 0 6px 20px rgba(232,92,130,0.35); }
+
+  footer { border-top: 1px solid var(--line); padding: 36px 0; }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+  footer .fine { color: var(--cocoa-soft); font-size: 0.88rem; }
+
+  @media (max-width: 900px) {
+    .hub-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .hub-grid { grid-template-columns: 1fr; }
+    .wrap { padding: 0 20px; }
+    .nav-cta { padding: 9px 14px; font-size: 0.82rem; }
+    .logo span.brand-text { display: none; }
+    .back-link span.label { display: none; }
+    footer .wrap { flex-direction: column; align-items: flex-start; text-align: left; }
+  }
+
+  /* ---------- Floating WhatsApp button ---------- */
+  .whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: max(20px, env(safe-area-inset-bottom, 0px));
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25D366;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 90;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 10px 26px rgba(37, 211, 102, 0.55), 0 2px 6px rgba(0,0,0,0.15); }
+  .whatsapp-float svg { width: 30px; height: 30px; fill: #fff; }
+  @media (max-width: 480px) {
+    .whatsapp-float { right: 16px; bottom: max(16px, env(safe-area-inset-bottom, 0px)); width: 52px; height: 52px; }
+    .whatsapp-float svg { width: 27px; height: 27px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="logo" href="index.html">
+      <span class="logo-placeholder" title="Client logo goes here">LOGO</span>
+      <span class="brand-text">Heaven's Sprinkle Cakes</span>
+    </a>
+    <a class="back-link" href="index.html">← <span class="label">Back to home</span></a>
+    <a class="nav-cta" href="index.html#order">Order a cake</a>
+  </nav>
+</header>
+<div class="header-spacer"></div>
+
+<main>
+  <section class="page-head wrap">
+    <span class="kicker">The full gallery</span>
+    <h1>Browse by occasion</h1>
+    <p>Each occasion has its own gallery of recent bakes. Pick one to see more.</p>
+  </section>
+
+  <div class="wrap">
+    <div class="hub-grid">
+      <a class="hub-card" href="gallery-birthday.html">
+        <div class="thumb"><img src="cake-birthday-manu.jpg" alt="Birthday cakes gallery" loading="lazy"></div>
+        <div class="body">
+          <h2>Birthday Cakes</h2>
+          <p>Big tiers, bold colors, candles included.</p>
+          <span class="view">View gallery →</span>
+        </div>
+      </a>
+      <a class="hub-card" href="gallery-cupcakes.html">
+        <div class="thumb"><img src="cupcakes-number6.jpg" alt="Cupcake towers gallery" loading="lazy"></div>
+        <div class="body">
+          <h2>Cupcake Towers</h2>
+          <p>A showpiece for the dessert table.</p>
+          <span class="view">View gallery →</span>
+        </div>
+      </a>
+      <a class="hub-card" href="gallery-engagement.html">
+        <div class="thumb"><img src="cake-white-chocdrip.jpg" alt="Engagement cakes gallery" loading="lazy"></div>
+        <div class="body">
+          <h2>Engagement Cakes</h2>
+          <p>Elegant tiers and delicate detail.</p>
+          <span class="view">View gallery →</span>
+        </div>
+      </a>
+      <a class="hub-card" href="gallery-baby-shower.html">
+        <div class="thumb"><img src="cupcakes-mermaid-unicorn.jpg" alt="Baby shower cakes gallery" loading="lazy"></div>
+        <div class="body">
+          <h2>Baby Shower Cakes</h2>
+          <p>Soft palettes to welcome someone new.</p>
+          <span class="view">View gallery →</span>
+        </div>
+      </a>
+      <a class="hub-card" href="gallery-graduation.html">
+        <div class="thumb"><img src="cake-21st-birthday-blackgold.jpg" alt="Graduation cakes gallery" loading="lazy"></div>
+        <div class="body">
+          <h2>Graduation Cakes</h2>
+          <p>A sweet way to mark the milestone.</p>
+          <span class="view">View gallery →</span>
+        </div>
+      </a>
+      <a class="hub-card" href="gallery-funfetti.html">
+        <div class="thumb"><img src="cake-unicorn-rainbow.jpg" alt="Funfetti gallery" loading="lazy"></div>
+        <div class="body">
+          <h2>Funfetti, Made to Order</h2>
+          <p>Sprinkles inside and out, any time of year.</p>
+          <span class="view">View gallery →</span>
+        </div>
+      </a>
+      <a class="hub-card" href="gallery-cookies.html">
+        <div class="thumb"><img src="cookies-tub-pressed-shapes.jpg" alt="Cookies and treats gallery" loading="lazy"></div>
+        <div class="body">
+          <h2>Cookies &amp; Treats</h2>
+          <p>Butter cookies, shortbread, and sweet treats by the tub.</p>
+          <span class="view">View gallery →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <section class="cta-strip wrap">
+    <h2>See something you like?</h2>
+    <p>Tell us the flavor and occasion — we'll take it from here.</p>
+    <a class="btn-primary" href="index.html#order">Start your order</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><span class="logo-placeholder" title="Client logo goes here">LOGO</span> Heaven's Sprinkle Cakes</div>
+    <div class="fine">© 2026 Heaven's Sprinkle Cakes. Baked with love, one order at a time.</div>
+  </div>
+</footer>
+
+
+<a class="whatsapp-float" href="https://wa.me/27664135496?text=Hi%21%20I%27d%20like%20to%20enquire%20about%20ordering%20a%20cake." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M16.01 3C9.38 3 4 8.35 4 14.94c0 2.29.64 4.44 1.75 6.27L4 29l8.03-2.1a12.9 12.9 0 0 0 3.98.63h.01c6.63 0 12-5.35 12-11.94C28.02 8.6 22.65 3 16.01 3zm7.02 17.07c-.3.83-1.72 1.6-2.37 1.7-.6.09-1.36.13-2.19-.14-.5-.16-1.15-.37-1.98-.73-3.48-1.5-5.75-5-5.93-5.23-.17-.24-1.42-1.88-1.42-3.58 0-1.7.9-2.53 1.22-2.87.31-.35.68-.44.9-.44.23 0 .45 0 .65.01.21.01.49-.08.76.58.3.72.99 2.49 1.08 2.67.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.37-.16.72.21.35.93 1.53 1.99 2.48 1.37 1.22 2.52 1.6 2.87 1.78.35.18.56.15.76-.09.21-.24.88-1.03 1.12-1.38.24-.35.47-.29.79-.18.32.12 2.04.96 2.39 1.14.35.18.58.26.67.41.09.15.09.85-.21 1.68z"/>
+  </svg>
+</a>
+
+</body>
+</html>
